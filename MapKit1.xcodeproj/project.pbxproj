@@ -12,6 +12,7 @@
 		7CFF902C1DBE55A9006C0A01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CFF902A1DBE55A9006C0A01 /* Main.storyboard */; };
 		7CFF902E1DBE55A9006C0A01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CFF902D1DBE55A9006C0A01 /* Assets.xcassets */; };
 		7CFF90311DBE55A9006C0A01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CFF902F1DBE55A9006C0A01 /* LaunchScreen.storyboard */; };
+		7CFF903A1DBE55C4006C0A01 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFF90391DBE55C4006C0A01 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		7CFF902D1DBE55A9006C0A01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CFF90301DBE55A9006C0A01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7CFF90321DBE55A9006C0A01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CFF90391DBE55C4006C0A01 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CFF903A1DBE55C4006C0A01 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				7CFF90251DBE55A9006C0A01 /* MapKit1 */,
 				7CFF90241DBE55A9006C0A01 /* Products */,
+				7CFF90381DBE55C4006C0A01 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				7CFF90321DBE55A9006C0A01 /* Info.plist */,
 			);
 			path = MapKit1;
+			sourceTree = "<group>";
+		};
+		7CFF90381DBE55C4006C0A01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CFF90391DBE55C4006C0A01 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,7 +108,13 @@
 				TargetAttributes = {
 					7CFF90221DBE55A8006C0A01 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = GVDGLD972H;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -260,7 +278,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GVDGLD972H;
 				INFOPLIST_FILE = MapKit1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yury.MapKit1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,7 +292,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GVDGLD972H;
 				INFOPLIST_FILE = MapKit1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yury.MapKit1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
